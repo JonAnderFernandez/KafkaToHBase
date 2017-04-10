@@ -11,29 +11,29 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
-        <!-- DEPENDENCIAS DE FLINK -->
+        <!-- DEPENDENCIAS DE FLINK -->        
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-java</artifactId>
-            <version>0.9.1</version>
+            <version>1.1.1</version>
         </dependency>
-        
-	<dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-streaming-core</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-        
+
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-clients</artifactId>
-            <version>0.9.1</version>
+            <artifactId>flink-streaming-java_2.11</artifactId>
+            <version>1.1.1</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kafka</artifactId>
-            <version>0.9.1</version>
+            <artifactId>flink-clients_2.11</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka-0.9_2.11</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <!-- DEPENDENCIAS DE HBASE --> 
         <dependency>
