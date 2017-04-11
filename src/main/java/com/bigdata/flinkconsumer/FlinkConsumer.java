@@ -6,6 +6,7 @@
 package com.bigdata.flinkconsumer;
 
 import java.io.IOException;
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,8 +84,9 @@ public class FlinkConsumer {
         // (deprecated) HTable hTable = new HTable(config, tableName);
         Table t = c.getTable(tableName);
         // Instantiating Put class. Accepts a row key.
-        TimeStamp ts = new TimeStamp(new Date());
-        Put p = new Put(Bytes.toBytes(ts.toString()));
+        TimeStamp ts = new TimeStamp(new Date());        
+        Date d = ts.getDate();        
+        Put p = new Put(Bytes.toBytes(d.toString()));
         // adding values using addColumn() method. Accepts column family name, qualifier/row name ,value.
         // (deprecated) p.addColumn(Bytes.toBytes("messageJava"),Bytes.toBytes("java"),Bytes.toBytes(m));
         p.addColumn(Bytes.toBytes("messageJava"),Bytes.toBytes("java"),Bytes.toBytes(m));
