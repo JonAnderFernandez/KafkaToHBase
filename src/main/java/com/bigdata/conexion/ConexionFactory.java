@@ -18,7 +18,7 @@ public class ConexionFactory extends BasePooledObjectFactory<Connection>{
     // the override method are used internaly by the implementation of ObjectPool
     @Override
     public Connection create() throws Exception {
-        return HBaseConexion.getConnection();
+        return HBaseConexion.getInstance().getConnection();
     }
 
     @Override
